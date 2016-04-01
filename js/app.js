@@ -3,7 +3,7 @@ app.config(function ($routeProvider) {
   $routeProvider 
     .when('/', { 
       controller: 'DayController', 
-      templateUrl: 'views/day.html' 
+      templateUrl: 'js/views/day.html' 
     })
   .when('/night', {
     controller: 'DayController' ,
