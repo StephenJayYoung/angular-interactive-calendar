@@ -5,9 +5,9 @@ app.config(function ($routeProvider) {
       controller: 'DayController', 
       templateUrl: 'js/views/day.html' 
     })
-  .when('/night', {
-    controller: 'DayController' ,
-    templateUrl: 'views/day.html'
+  .when('/:id', {
+    controller: 'EventController' ,
+    templateUrl: 'js/views/event.html'
   })
     .otherwise({ 
       redirectTo: '/' 

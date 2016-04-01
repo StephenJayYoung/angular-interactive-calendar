@@ -1,5 +1,5 @@
-<div class="event-detail">
-  <h2 class="event-name"></h2>
-  <p class="time"><span class="from">  </span> - <span class="to">  </span></p>
-  <p class="where">  </p>
+<div class="event-detail" ng-repeat="events in events">
+  <h2 class="event-name">{{events.name}} </h2>
+  <p class="time"><span class="from"> {{events.from | date}} </span> - <span class="to"> {{events.to | date}} </span></p>
+  <p class="where"> {{events.where}} </p>
 </div>
