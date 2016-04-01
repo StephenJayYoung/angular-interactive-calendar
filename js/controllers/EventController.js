@@ -1,9 +1,5 @@
-app.factory('events', ['$http', function($http) {
-  return $http.get('https://s3.amazonaws.com/codecademy-content/courses/ltp4/events-api/events.json')
-         .success(function(data) {
-           return data;
-         })
-         .error(function(data) {
-           return data;
-         });
+app.controller('EventController', ['$scope', 'events', '$routeParams', function($scope, events, $routeParams) {
+  events.success(function(data) {
+    $scope.day = data[$routeParams.id];
+  });
 }]);
